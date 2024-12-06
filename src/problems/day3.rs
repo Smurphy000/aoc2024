@@ -18,3 +18,11 @@ impl Problem for Day3 {
 impl Day3 {
     fn parse_file() {}
 }
+
+#[cfg(test)]
+mod tests {
+    use super::Day3;
+
+    #[test]
+    fn test_parse_file() {}
+}
