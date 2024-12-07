@@ -22,10 +22,10 @@ pub struct Solutions {
     pub days: Vec<DailySolution>,
 }
 pub trait Problem {
-    fn part1(&self) -> Option<String> {
+    fn part1(&self, d: &str) -> Option<String> {
         None
     }
-    fn part2(&self) -> Option<String> {
+    fn part2(&self, d: &str) -> Option<String> {
         None
     }
     fn answer(&self) -> DailySolution {

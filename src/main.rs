@@ -10,6 +10,7 @@ fn main() {
             Day1::answer(&Day1),
             Day2::answer(&Day2),
             Day3::answer(&Day3),
+            Day4::answer(&Day4),
         ],
     };
     println!("{:#?}", solutions);

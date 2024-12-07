@@ -7,7 +7,7 @@ use std::{
 pub struct Day2;
 
 impl Problem for Day2 {
-    fn part1(&self) -> Option<String> {
+    fn part1(&self, d: &str) -> Option<String> {
         let reports = Self::parse_file().unwrap();
 
         let result = reports
@@ -17,7 +17,7 @@ impl Problem for Day2 {
 
         Some(result.to_string())
     }
-    fn part2(&self) -> Option<String> {
+    fn part2(&self, d: &str) -> Option<String> {
         let reports = Self::parse_file().unwrap();
 
         let result = reports
@@ -28,7 +28,7 @@ impl Problem for Day2 {
         Some(result.to_string())
     }
     fn answer(&self) -> DailySolution {
-        DailySolution::new(2, self.part1(), self.part2())
+        DailySolution::new(2, self.part1(""), self.part2(""))
     }
 }
 

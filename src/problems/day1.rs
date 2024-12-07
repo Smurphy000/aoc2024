@@ -9,7 +9,7 @@ use crate::problem::{DailySolution, Problem};
 pub struct Day1;
 
 impl Problem for Day1 {
-    fn part1(&self) -> Option<String> {
+    fn part1(&self,d: &str) -> Option<String> {
         let (mut left, mut right) = Self::parse_file().unwrap();
         left.sort();
         right.sort();
@@ -23,7 +23,7 @@ impl Problem for Day1 {
         Some(result.to_string())
     }
 
-    fn part2(&self) -> Option<String> {
+    fn part2(&self, d: &str) -> Option<String> {
         let (left, right) = Day1::parse_file().unwrap();
 
         let mut mapping: HashMap<u128, u32> = HashMap::new();
@@ -53,7 +53,7 @@ impl Problem for Day1 {
     }
 
     fn answer(&self) -> DailySolution {
-        DailySolution::new(1, self.part1(), self.part2())
+        DailySolution::new(1, self.part1(""), self.part2(""))
     }
 }
 
